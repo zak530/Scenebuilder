@@ -17,11 +17,6 @@ public class HelloController {
 
     private Lista l;
 
-    @FXML
-    public void initialize() {
-        l = new Lista();
-        areaRisultati.setText("");
-    }
 
     @FXML
     protected void somma() {
@@ -30,7 +25,7 @@ public class HelloController {
         int nuovoValore = valoreCorrente + 10;
         tf.setText(String.valueOf(nuovoValore));
         l.inserimentoInTesta(nuovoValore);
-        areaRisultati.setText(l.stampaTutti());
+        areaRisultati.setText(String.valueOf(nuovoValore));
 
 
     }
@@ -41,7 +36,7 @@ public class HelloController {
         int nuovoValore = valoreCorrente - 10;
         tf.setText(String.valueOf(nuovoValore));
         l.inserimentoInTesta(nuovoValore);
-        areaRisultati.setText(l.stampaTutti());
+        areaRisultati.setText(String.valueOf(nuovoValore));
 
     }
 }

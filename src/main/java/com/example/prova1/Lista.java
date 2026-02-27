@@ -21,16 +21,4 @@ public class Lista {
         head = newNode;
         size++;
     }
-
-    public String stampaTutti() {
-        StringBuilder risultato = new StringBuilder();
-        Nodo current = head;
-
-        while (current != null) {
-            risultato.append(current.getDato()).append("\n");
-            current = current.getNext();
-        }
-
-        return risultato.toString();
-    }
 }
