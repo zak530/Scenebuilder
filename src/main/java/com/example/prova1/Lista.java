@@ -1,7 +1,6 @@
 package com.example.prova1;
 
 public class Lista {
-
     private int size;
     private Nodo head;
     private Nodo cursor;
@@ -16,20 +15,22 @@ public class Lista {
         return size;
     }
 
-    public Nodo getHead() {
-        return head;
+    public void inserimentoInTesta(int valore) {
+        Nodo newNode = new Nodo(valore);
+        newNode.setNext(head);
+        head = newNode;
+        size++;
     }
 
-    public Nodo getCursor() {
-        return cursor;
+    public String stampaTutti() {
+        StringBuilder risultato = new StringBuilder();
+        Nodo current = head;
+
+        while (current != null) {
+            risultato.append(current.getDato()).append("\n");
+            current = current.getNext();
+        }
+
+        return risultato.toString();
     }
-
-    public void setCursor(Nodo cursor) {
-        this.cursor = cursor;
-    }
-
-
-
-
-
 }
