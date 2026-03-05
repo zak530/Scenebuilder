@@ -21,4 +21,13 @@ public class Lista {
         head = newNode;
         size++;
     }
+
+    @Override
+    public String toString() {
+        return "Lista{" +
+                "size=" + size +
+                ", head=" + head +
+                ", cursor=" + cursor +
+                '}';
+    }
 }

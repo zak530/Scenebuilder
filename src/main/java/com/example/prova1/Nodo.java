@@ -30,4 +30,15 @@ public class Nodo {
     public void setNext(Nodo next) {
         this.next = next;
     }
+
+
+    @Override
+    public String toString() {
+        return "Nodo{" +
+                "dato=" + dato +
+                ", next=" + next +
+                '}';
+    }
+
+
 }
