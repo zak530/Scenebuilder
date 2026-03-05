@@ -6,6 +6,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class HelloController {
+
     @FXML
     protected Label welcomeText;
 
@@ -15,23 +16,16 @@ public class HelloController {
     @FXML
     protected TextArea areaRisultati;
 
-    private Lista l;
-
-
     @FXML
-    Lista li =new Lista();
-
+    private Lista li = new Lista();
 
     @FXML
     protected void somma() {
-
         int valoreCorrente = Integer.parseInt(tf.getText());
         int nuovoValore = valoreCorrente + 10;
         tf.setText(String.valueOf(nuovoValore));
         li.inserimentoInTesta(nuovoValore);
-        areaRisultati.setText(String.valueOf(nuovoValore));
-
-
+        areaRisultati.appendText(nuovoValore + "\n");
     }
 
     @FXML
@@ -40,20 +34,15 @@ public class HelloController {
         int nuovoValore = valoreCorrente - 10;
         tf.setText(String.valueOf(nuovoValore));
         li.inserimentoInTesta(nuovoValore);
-        areaRisultati.setText(String.valueOf(nuovoValore));
-
+        areaRisultati.appendText(nuovoValore + "\n");
     }
 
     @FXML
     protected void moltiplica() {
-
         int valoreCorrente = Integer.parseInt(tf.getText());
         int nuovoValore = valoreCorrente * 10;
         tf.setText(String.valueOf(nuovoValore));
-        l.inserimentoInTesta(nuovoValore);
-        areaRisultati.setText(String.valueOf(nuovoValore));
-
+        li.inserimentoInTesta(nuovoValore);
+        areaRisultati.appendText(nuovoValore + "\n");
     }
-
-
 }
